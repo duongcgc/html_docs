@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>WICON HTML Template Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="assets/google-code-prettify/prettify.css" rel="stylesheet"/>
+    <link href="assets/css/docs.css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="assets/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+    <style>
+        .pluginwrap {
+            display: none;
+        }
+
+        .pluginwrapActive {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Subhead
+        ================================================== -->
+<header class="jumbotron subhead">
+    <div class="container container-narrow">
+        <h1></h1>
+        <div class="header-icons">
+            <a href=""><img src="assets/i/logo.png" alt=""></a>
+        </div>
+        <div class="header-buttons"><a href="#" class="hide">Support Forum</a>
+            <a class="head-btn" href="https://themeforest.net/item/wicon-construction-building-html-template/19226917">Purchase Now</a></div>
+    </div>
+</header>
+<div class="sidebar-menu">
+    <ul>
+        <li><a href="javascript:;" class="clickable" data-section="#overview">1. Overview</a></li>
+        <li><a href="javascript:;" class="clickable" data-section="#template_structure">2. Theme Structure</a></li>
+        <li><a href="javascript:;" class="clickable" data-section="#font">3. Fonts</a></li>
+        <li>
+            <a href="javascript:;" class="clickable" data-section="#theme_config">4. Theme &amp; Layout Configuration</a>
+        </li>
+        <li><a href="javascript:;" class="clickable" data-section="#helper_classes">5. WICON Helper Classes</a></li>
+        <li><a href="javascript:;" class="clickable" data-section="#sass">6. SASS</a></li>
+        <li><a href="javascript:;" class="clickable" data-section="#file_structure">7. File Structure</a></li>
+        <li><a href="javascript:;" class="clickable" data-section="#extend">8. Coding &amp; Extending</a></li>
+        <li><a href="javascript:;" class="clickable" data-section="#references">9. References</a></li>
+        <li><a href="javascript:;" class="clickable" data-section="#log">10. Change Log</a></li>
+    </ul>
+</div>
+
+<div id="overview" class="container content-area">
+    <div class="row">
+        <div class="span12">
+            <div class="well intro-text">
+                <h3 class="normal-margin">Thank You For Purchasing WICON &amp; An Awesome Creative Design for Web<br>
+                </h3>
+                <p>&nbsp;</p>
+                <p align="center"><a href="https://themeforest.net/user/nibase"><img src="assets/i/AAA.jpg"></a></p>
+                <p>&nbsp;</p><br>
+                 <p> If you have any questions that are beyond the scope of this help file, please email our support
+                    <a href="mailto:support@univertheme.com">support@univertheme.com</a>.
+                </p>
+				<p> or open a free support ticket on our <a href="https://univertheme.ticksy.com/?utm_source=documentation&utm_medium=cpc&utm_campaign=wicon_html&utm_content=support_link">Support Portal</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px;margin-bottom:20px">
+        <div class="span12">
+            <table class="table table-bordered table-striped">
+                <tbody>
+                <tr>
+                    <td>
+                        <ul class="menu">
+                            <h4>Overview</h4>
+                            <p> WICON is an ever expanding, fully responsive and multipurpose HTML frontend theme powered with
+                                <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap 3.3.7 Framework </a>.
+                                <br><br> WICON is a Creative Modern, Elegant and Multi-purpose HTML Template. WICON HTML Template designed for convert into WordPress, Joomla, Magento, Other systems, Other Purpose, Etc… In line with Modern Design Trends, Color Fresh and Dynamic, Creative + Detail Layouts and Super Clever, Super Clear – Clean – Elegant! This one will be an amazing choice!
+                            </p>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <section id="template_structure">
+                <div class="page-header">
+                    <h1>2. Template Agency</h1> <a href="javascript:;">To top <i class="icon-arrow-up"></i></a></div>
+                <p> has a base page structure containg of <code>header</code>, <code>mega menu</code>,
+                    <code>top bar</code>, <code>components</code> and <code>footer</code> as shown below: </p>
+                <img src="assets/i/01_01_home_default.jpg" style="width:700px; height:auto;">
+
+                <h3>Page Head</h3>
+                <p> The Page head contains of metadata, theme css files: </p>
+                <pre class="prettyprint linenums">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" /&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;{TITLE}&lt;/title&gt;
+
+    &lt;link href="./plugin/fonts/transfonter/fonts.css" rel="stylesheet"&gt;
+    &lt;link href="./plugin/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" /&gt;
+    &lt;link href="./plugin/fonts/platicon/font/flaticon.css"  rel="stylesheet"&gt;
+    &lt;link href="./plugin/fonts/themify/themify-icons.css" rel="stylesheet" /&gt;
+    &lt;link href="./plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet" /&gt;
+    &lt;link href="./plugin/animsition/css/animsition.min.css" rel="stylesheet" /&gt;
+    &lt;link href="./plugin/lightbox/css/lightbox.min.css" rel="stylesheet" /&gt;
+    &lt;link href="./css/animate.css" rel="stylesheet" /&gt;
+    &lt;link href="./plugin/slick/slick.css" rel="stylesheet" /&gt;
+    &lt;link href="./css/style.css" rel="stylesheet" /&gt;
+    &lt;link href="./css/customize.css" rel="stylesheet" /&gt;
+&lt;/head&gt;
+</pre>
+
+                <h3>Base Plugins</h3>
+                <p> Base plugins are required by global reusable components(portfolio, carousels, fancybox, etc). </p>
+                <pre class="prettyprint linenums">
+&lt;!-- BEGIN: SCRIPT --&gt;
+    &lt;script src="./plugin/jquery/jquery-2.0.2.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/animsition/js/animsition.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/lightbox/js/lightbox.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/process-bar/progressbar.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/slick/slick.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/themejs/jquery.countTo.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/themejs/jquery.isotope.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/masonry/masonry.pkgd.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/themejs/jquery.stellar.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/themejs/jquery.stickOnScroll.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/themejs/jquery.waypoints.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/numeral/numeral.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/lucidscroll/lucid.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/slickNav/jquery.slicknav.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/main.js"&gt;&lt;/script&gt;
+    &lt;script src="./plugin/custom.js"&gt;&lt;/script&gt;
+&lt;!-- END: SCRIPT --&gt;
+</pre>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <section id="font">
+                <div class="page-header">
+                    <h1>3. Fonts</h1> <a href="javascript:;">To top <i class="icon-arrow-up"></i></a></div>
+                <p> uses Roboto Condensed Google Font as base font. The font must be loaded in HTML header before the rest of css files:</code>
+                </p>
+                <pre class="prettyprint linenums">
+&lt;link href="./plugin/fonts/transfonter/fonts.css" rel="stylesheet"&gt;
+&lt;link href="./plugin/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" /&gt;
+&lt;link href="./plugin/fonts/platicon/font/flaticon.css"  rel="stylesheet"&gt;
+&lt;link href="./plugin/fonts/themify/themify-icons.css" rel="stylesheet" /&gt;
+</pre>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <section id="theme_config">
+                <div class="page-header">
+                    <h1>4. Theme & Layout Configuration</h1> <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                </div>
+                <h3>Layout Settings</h3>
+                <p> The best way to learn how to use 's available layout options, please go to one of pages and expand the "Theme Settings" quick sidebar panel by clicking the sidebar toggler icon in the header menu. Choose you preferred layout options, and use
+                    <code>Chrome's Developer Tool</code> and/or
+                    <code>Firefox's Firebug Tool</code> to see the HTML code changes upon you select your layout combination. When you change the laypout option, mostly some css classes will be added into the page's body element. When you change the layout settings only the most parent HTML elements will be modified, the page content part remains as it is.
+                </p>
+                <p> To learn how to use the browser developer tools you can refer to below links: </p>
+                <p>
+                    <a href="https://developer.mozilla.org/en/docs/Debugging_JavaScript" target="_blank">https://developer.mozilla.org/en/docs/Debugging_JavaScript</a>
+                    <br>
+                    <a href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging" target="_blank">https://developers.google.com/chrome-developer-tools/docs/javascript-debugging</a>
+                </p>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <section id="helper_classes">
+                <div class="page-header">
+                    <h1>5. WICON Helper Classes</h1> <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                </div>
+                <p> Helper Classes are predefined CSS classes to assist your development. Most of the general CSS stylings are readily available for you upon download. To use Helper Classes, simply type in the Helper Class name into your element class attribute.
+                <h3>General Classes</h3>
+                <p> General Classes are 's basic utility classes that predefines basic borders, display styles, font styles or resets padding/margin. </p>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped1">
+                        <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row"><code>vk-space x-small</code></th>
+                            <td>Set space 40px two component</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-space small</code></th>
+                            <td>Set space 60px two component</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-space medium</code></th>
+                            <td>Set space 100px two component</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-space x-medium</code></th>
+                            <td>Set space 120px two component</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-space large</code></th>
+                            <td>Set space 200px two component</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-space x-large</code></th>
+                            <td>Set space 240px two component</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-full-width</code></th>
+                            <td>Set element 100% width</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-list</code></th>
+                            <td>Reset ul ol list</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-list-inline</code></th>
+                            <td>Ul ol list to single line</td>
+                        </tr>
+
+                            <th scope="row"><code>vk-font-bold</code></th>
+                            <td>Sets the <code>font-weight</code> in the element to
+                                <font color="#dd1144" face="Monaco, Menlo, Consolas, Courier New, monospace">bold</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-text-uppercase</code></th>
+                            <td>Sets the all your fonts in the element to UPPERCASE</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-text-lowercase</code></th>
+                            <td>Sets the all your fonts in the element to lowercase. This is 's default font case</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><code>vk-text-italic</code></th>
+                            <td>Sets the all your text in the element to italic</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>Margin & Padding Classes</h3>
+                <p> Margin & Padding classes are 's flexible predefined classes for you to set margins or paddings to your element within the HTML class attribute quickly and effortlessly. </p>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped1">
+                        <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row"><code>vk-clear-padding</code></th>
+                            <td>Clear padding of the element</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-clear-padding-[x]</code></th>
+                            <td>Clear padding of the <code>[x]</code> element, replace the <code>[x]</code> by <code>top</code> <code>left</code> <code>bottom</code> <code>right</code> </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-clear-margin</code></th>
+                            <td>Clear margin of the element</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-clear-margin-[x]</code></th>
+                            <td>Clear margin of the <code>[x]</code> element, replace the <code>[x]</code> by <code>top</code> <code>left</code> <code>bottom</code> <code>right</code> </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>Alignment Classes</h3>
+                <p> Alignment Classes are 's predefined classes for styling your element's
+                    <code>text-align</code> style. aligns your text to the left of the element by default. </p>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped1">
+                        <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row"><code>vk-text-center</code></th>
+                            <td>Font center alignment</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-text-left</code></th>
+                            <td>Font left alignment</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-text-right</code></th>
+                            <td>Font right alignment</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>Color Classes</h3>
+                <p> Color Classes are 's predefined classes to control the colour for you element's
+                    <code>background</code> and <code>font</code>. </p>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped1">
+                        <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row"><code>vk-background-[color]</code></th>
+                            <td>Sets your element's background color to a color that is either
+                                <code>black-1</code>, <code>black-2</code>,
+                                <code>yellow-1</code> , <code>yellow-2</code> ,
+                                <code>white</code>. Please refer to 's Color chart for the full list of colors available.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-text-color-[color]</code></th>
+                            <td>Sets your element's font color to a color that is either <code>white</code>,
+                                <code>black-1</code>, <code>black-2</code>,
+                                <code>yellow-1</code> , <code>yellow-2</code> ,
+                                <code>white</code>. Please refer to 's Color chart for the full list of colors available.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><code>vk-btn-[color]</code></th>
+                            <td>Sets your element's button color to a color that is either
+                                <code>yellow:(color:#FFC000)</code>, <code>green:(color:#9DC835)</code>,
+                                <code>turquoise:(color:#3EC0A3)</code>, <code>blue:(color:#4C9ECD)</code>,
+                                <code>violet:(color:#AA6BD2)</code>
+                               . Please refer to 's Color chart for the full list of colors available.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <section id="sass">
+                <div class="page-header">
+                    <h1>6. SASS</h1> <a href="javascript:;">To top <i class="icon-arrow-up"></i></a></div>
+                <p> 's CSS files are powered by SASS(<a href="sass-lang.com" target="_black">sass-lang.com</a>). The required SASS version is v3.3.7 or later. We recommend you to use Prepros Tool from
+                    <a href="prepros.io" target="_black">prepros.io</a> to compile the SASS files in real time. Simply install the Koala App Tool and add the 's SASS directory (theme/src) to start compiling the SASS files.
+                </p>
+                <p> When you compile the sass files do not compile includable sass files, which have their filename that starts with underscore (e.g: _variables.scss, _buttons.scss). Only the master files can be compiled (all the scss files without underscore infront of their filenames). Refer the below master SASS files to be compiled to spesific paths. For more info please check theme/src/koala-config.json file which used as a main configuration file to comple the sass files. </p>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <section id="file_structure">
+                <div class="page-header">
+                    <h1>7. File Structure</h1> <a href="javascript:;">To top <i class="icon-arrow-up"></i></a></div>
+                <p> supports multiple themes and the core components including all the 3rd party plugins can be used accros all the themes. </p>
+                <h3> Theme Folder Structure</h3>
+                <table class="table table-bordered table-striped1" width="600">
+                    <thead>
+                    <tr>
+                        <th width="30%">Folder</th>
+                        <th width="70%">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code><i class="icon icon-minus"></i></code></td>
+                        <td>Root folder</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 25px"><code><i class="icon icon-minus"></i>css</code></td>
+                        <td>Css folder contains of compiled css files</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 25px"><code><i class="icon icon-minus"></i>images</code></td>
+                        <td>Contains of all images in website</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 25px"><code><i class="icon icon-minus"></i>plugins</code></td>
+                        <td>Contains of all plugins used withing</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 25px"><code><i class="icon icon-minus"></i>sass</code></td>
+                        <td>Contains of 's SASS files</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 50px"><code><i class="icon icon-minus"></i>components</code></td>
+                        <td>Contains of 's SASS files packaged by their individual component categories</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 50px"><code><i class="icon icon-minus"></i>layout</code></td>
+                        <td>Contains of 's SASS files that controls the plugins included</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 50px"><code><i class="icon icon-minus"></i>variables</code></td>
+                        <td>Contains of 's variables library files</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <section id="extend">
+                <div class="page-header">
+                    <h1>8. Coding & Extending</h1> <a href="javascript:;">To top <i class="icon-arrow-up"></i></a></div>
+                <h3>
+                    CSS
+                </h3>
+                <p> To overide the theme CSS styles in CSS level you should use
+                    <code>css/custom.css</code> for your own customization. This will make the future updates easier if you keep your own CSS code seperate.
+                </p>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <section id="references">
+                <div class="page-header">
+                    <h1>9. References</h1> <a href="javascript:;">To top <i class="icon-arrow-up"></i></a></div>
+                <p> Below is the list of all plugins and external resources used to power . </p>
+                <table class="table table-bordered table-striped" width="600">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>URL</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td width="300">jQuery 3.1.1</td>
+                        <td>Core Javascript library</td>
+                        <td><a href="http://www.jquery.com" target="_blank">http://www.jquery.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>jQuery Waypoints</td>
+                        <td>With the release of Waypoints 3.0 the library no longer has a hard jQuery dependency, so the name has changed slightly.</td>
+                        <td>
+                            <a href="https://github.com/imakewebthings/jquery-waypoints" target="_blank">https://github.com/imakewebthings/jquery-waypoints</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>jQuery Loader 2</td>
+                        <td>QueryLoader2 is a better version of the old script posted in 2009. It serves the main purpose of preloading the images on your website by showing an overlay and a loading bar. It automatically fetches all your images and background images and preloads them before showing the webpage.</td>
+                        <td>
+                            <a href="https://blog.gaya.ninja/articles/queryloader2-preload-your-images-with-ease/" target="_blank">https://blog.gaya.ninja/articles/queryloader2-preload-your-images-with-ease/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>jQuery Isotope</td>
+                        <td>An isotope is a form of a chemical element whose atomic nucleus contains a specific number of neutron s, in addition to the number of proton s that uniquely defines the element.</td>
+                        <td>
+                            <a href="https://github.com/metafizzy/isotope" target="_blank">https://github.com/metafizzy/isotope</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Twitter Bootstrap v3.3.7</td>
+                        <td>Sleek, intuitive, and powerful front-end framework for faster and easier web development</td>
+                        <td><a href="http://getbootstrap.com" target="_blank">http://getbootstrap.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Slick Corousel Plugin</td>
+                        <td>The last carousel you'll ever need.</td>
+                        <td>
+                            <a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FontAwesome</td>
+                        <td>The iconic font designed for use with Twitter Bootstrap</td>
+                        <td>
+                            <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">http://fortawesome.github.com/Font-Awesome/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Font Substitution</td>
+                        <td> Themify Icons is a complete set of icons for use in web design and apps, consisting of 320+ pixel-perfect, hand-crafted icons that draw inspiration from Apple iOS 7 - available to the public, 100% FREE! You may use or distribute it for any purpose, whether personal or commercial. This icon set is a must have tool for web designers and developers.</td>
+                        <td>
+                            <a href="https://themify.me/themify-icons" target="_blank">https://themify.me/themify-icons</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Transfonter</td>
+                        <td> The @font-face CSS rule allows web developers to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, @font-face eliminates the need to depend on the limited number of fonts users have installed on their computers.</td>
+                        <td><a href="http://transfonter.org/" target="_blank">http://transfonter.org/</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <section id="log">
+                <div class="page-header">
+                    <h1>10. Change Log</h1> <a href="javascript:;">To top <i class="icon-arrow-up"></i></a></div>
+                <style>
+                    .changelog-list ul {
+                        margin: 5px 20px;
+                        padding: 0;
+                    }
+
+                    .changelog-list li {
+                        padding: 5px;
+                    }
+                </style>
+                <div class="changelog-list" style="height: 500px; overflow-y:auto; border: 1px solid #ddd; background: #fff; padding: 20px;">
+                    <h4>Version 1.0.0 – 20 October 2016</h4>
+                    <ul>
+                        <li> Initial Release</li>
+                    </ul>
+                    <h4>Version 1.2 – 03-14-2017</h4>
+                    <ul>
+                        <li>* Added 3 Homepages</li>
+                        <li>* Added Typography Element</li>
+                        <li>* Improve the quality</li>
+                    </ul>
+                         
+                        
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- END -->
+<footer class="footer">
+    <div class="container container-narrow">
+        <p>The Ever Growing Multi-purpose Template. Designed and built with love by
+            <a href="https://themeforest.net/user/nibase" target="_blank">Univer Theme</a></div>
+</footer>
+<!-- Le javascript
+        ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery-1.8.3.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/google-code-prettify/prettify.js"></script>
+<script src="assets/js/application.js"></script>
+</body>
+
+</html>
